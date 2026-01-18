@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #24232a;
+}
+
+/* ================= CONTAINER ================= */
+.container{
+    position: relative;
+    width: 380px;
+    min-height: 95vh;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ================= ANIMATION ================= */
+.container::before,
+.container::after{
+    content: '';
+    position: absolute;
+    inset: -50%;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(0deg, transparent, #03fe78, #03fe78);
+    transform-origin: bottom right;
+    animation: animate 7s linear infinite;
+}
+
+.container::after{
+    background: linear-gradient(0deg, transparent, #d803fe, #d803fe);
+    animation-delay: 3s;
+}
+
+@keyframes animate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ================= FORMULAIRE ================= */
+.form{
+    position: absolute;
+    inset: 3px;
+    border-radius: 8px;
+    background: #24232a;
+    z-index: 10;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2{
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #03fe78;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* ================= INPUTS ================= */
+.inputBox{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.inputBox input{
+    width: 100%;
+    padding: 10px 10px 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #03fe78;
+    font-size: 0.85em;
+    outline: none;
+    color: #03fe78;
+}
+
+/* ================= BOUTON ================= */
+input[type="submit"]{
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #03fe78;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}

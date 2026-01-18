@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #24232a;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    position: relative;
+    width: 360px;           /* largeur raisonnable */
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px 0;        /* espace autour du formulaire */
+}
+
+/* ===== ANIMATION ===== */
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    inset: -50%;
+    width: 480px;
+    height: 480px;
+    background: linear-gradient(0deg, transparent, #03fe78, #03fe78);
+    transform-origin: bottom right;
+    animation: animate 7s linear infinite;
+}
+
+.container::after {
+    background: linear-gradient(0deg, transparent, #d803fe, #d803fe);
+    animation-delay: 3s;
+}
+
+@keyframes animate {
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== FORMULAIRE ===== */
+.form {
+    position: relative;
+    margin: 0 auto;
+    background: #24232a;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 25px 25px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 320px;     /* limite pour ne pas être trop large */
+}
+
+/* ===== TITRE ===== */
+.form h2 {
+    text-align: center;
+    color: #03fe78;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* ===== INPUTS ===== */
+.inputBox {
+    margin-bottom: 15px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px 10px 6px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #03fe78;
+    font-size: 0.95em;
+    outline: none;
+    color: #03fe78;
+}
+
+/* ===== BOUTON ===== */
+input[type="submit"] {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #03fe78;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+/* ===== MOT DE PASSE OUBLIÉ ===== */
+.forgot {
+    text-align: center;
+    font-size: 0.8em;
+    color: #aaa;
+    margin-top: 12px;
+    cursor: pointer;
+}
