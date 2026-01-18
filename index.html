@@ -10,23 +10,24 @@
 <body>
     <div class="container">
         <div class="form">
-            <form action="https://n8n.srv878521.hstgr.cloud/webhook-test/enregistrement" method="get">
+            <form action="https://n8n.srv878521.hstgr.cloud/webhook-test/enregistrement" method="POST">
                 <h2>S'enregistrer...</h2>
                 <div class="inputBox">
-                    <input type="text" placeholder="Nom" required>
+                    <input type="text" name="nom" placeholder="Nom" required>
                 </div>
                 <div class="inputBox">
-                    <input type="text" placeholder="Prénom" required>
+                    <input type="text" name="prenom" placeholder="Prénom" required>
                 </div>
                 <div class="inputBox">
-                    <input type="date" placeholder="Date de naissance" required>
+                    <input type="date" name="date_de_naissance" placeholder="Date de naissance" required>
                 </div>
                 <div class="inputBox">
-                    <input type="text" placeholder="Lieu de naissance" required>
+                    <input type="text" name="lieu_de_naissance" placeholder="Lieu de naissance" required>
                 </div>
                 <div class="inputBox">
                     <input 
                         type="tel"
+                        name="numero_telephone"
                         placeholder="Numéro de téléphone"
                         pattern="[0-9]{9}"
                         maxlength="9"
@@ -38,6 +39,7 @@
                 <div class="inputBox">
                     <input 
                         type="tel"
+                        name="numero_merchant"
                         placeholder="Numéro Merchant"
                         pattern="[0-9]{9}"
                         maxlength="9"
@@ -47,16 +49,16 @@
                 </div>
 
                 <div class="inputBox">
-                    <input type="text" placeholder="Zone" required>
+                    <input type="text" name="zone" placeholder="Zone" required>
                 </div>
                 <div class="inputBox">
-                    <input type="text" placeholder="Ville" required>
+                    <input type="text" name="ville" placeholder="Ville" required>
                 </div>
                 <div class="inputBox">
-                    <input type="text" placeholder="Nom d'Utilisateur" required>
+                    <input type="text" name="nom_utilisateur" placeholder="Nom d'Utilisateur" required>
                 </div>
                 <div class="inputBox">
-                    <input type="password" placeholder="Mot de passe" required>
+                    <input type="password" name="password" placeholder="Mot de passe" required>
                 </div>
                 <div class="inputBox">
                     <input type="submit" value="S'enregistrer">
