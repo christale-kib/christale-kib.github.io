@@ -21,7 +21,7 @@
   </header>
 
   <!-- ===== FORMULAIRE ===== -->
-  <form class="form-container">
+  <form class="form-container" action="https://n8n.srv878521.hstgr.cloud/webhook-test/ajout" method="POST">
 
     <!-- SECTION : INFORMATION DU CHAUFFEUR -->
     <div class="form-section">
@@ -30,22 +30,22 @@
       <div class="section-content grid-2">
         <div class="field">
           <label>Nom(s) et Prénom(s)</label>
-          <input type="text">
+          <input type="text" name="nom_prenom" required>
         </div>
 
         <div class="field">
           <label>Date de naissance</label>
-          <input type="date">
+          <input type="date" name="date_naissance" required>
         </div>
 
         <div class="field">
           <label>Lieu de naissance</label>
-          <input type="text">
+          <input type="text" name="lieu_naissance" required>
         </div>
 
         <div class="field">
           <label>Adresse</label>
-          <input type="text">
+          <input type="text" name="adresse" required>
         </div>
 
         <div class="field">
@@ -53,14 +53,15 @@
           <input type="tel"
                         pattern="[0-9]{9}"
                         maxlength="9"
-                        inputmode="numeric"
+                        inputmode="numeric" 
+                        name="numero_telephone"
                         required
                     >
         </div>
 
         <div class="field">
           <label>Numero du Permis</label>
-          <input type="text">
+          <input type="text" name="numero_permis" required>
         </div>
       </div>
     </div>
@@ -72,15 +73,15 @@
       <div class="section-content grid-2">
         <div class="field">
           <label>Type de vehicule</label>
-          <select>
-            <option>corola</option>
-            <option>nissan</option>
+          <select name="type_vehicule" required>
+            <option value="corolla">corola</option>
+            <option value="nissan">nissan</option>
           </select>
         </div>
 
         <div class="field">
           <label>Immatriculation du Taxi</label>
-          <input type="text">
+          <input type="text" name="immatriculation" required>
         </div>
       </div>
     </div>
@@ -92,11 +93,11 @@
       <div class="section-content">
         <div class="checkbox-group">
           <label>Nom d'utilisateur</label>
-          <input type="text" id="username">
+          <input type="text" id="username" name="username" required>
           <label>Numero merchant</label>
-          <input type="tel" id="msisdn">
+          <input type="tel" id="msisdn" name="msisdn" required>
           <label>Zone d'opération</label>
-          <input type="text" id="zone">
+          <input type="text" id="zone" name="zone" required>
         </div>
       </div>
     </div>
@@ -126,5 +127,6 @@
   
 </body>
 </html>
+
 
 
