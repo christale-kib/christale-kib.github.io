@@ -15,7 +15,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <div class="header-right">
-        <p class="merchant-name">Merchant: <strong>Nom du Merchant</strong></p>
+        <p class="merchant-name">Merchant: <strong id="merchantName">Nom du Merchant</strong></p>
       </div>
     </div>
   </header>
@@ -92,11 +92,11 @@
       <div class="section-content">
         <div class="checkbox-group">
           <label>Nom d'utilisateur</label>
-          <input type="text">
+          <input type="text" id="username">
           <label>Numero merchant</label>
-          <input type="tel">
+          <input type="tel" id="msisdn">
           <label>Zone d'opération</label>
-          <input type="text">
+          <input type="text" id="zone">
         </div>
       </div>
     </div>
@@ -109,5 +109,21 @@
 
   </form>
 
+  <script>
+  const params = new URLSearchParams(window.location.search);
+
+  const username = params.get("username");
+  const msisdn = params.get("msisdn");
+  const zone = params.get("zone");
+  const merchant = params.get("merchant");
+
+  if (username) document.getElementById("username").value = username;
+  if (msisdn) document.getElementById("msisdn").value = msisdn;
+  if (zone) document.getElementById("zone").value = zone;
+  if (merchant) document.getElementById("merchantName").innerText = merchant;
+</script>
+
+  
 </body>
 </html>
+
