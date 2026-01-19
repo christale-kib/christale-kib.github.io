@@ -1,0 +1,135 @@
+/* ===== RESET SIMPLE ===== */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+/* ===== HEADER ===== */
+.page-header {
+  background: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: #1e73be;
+}
+
+.page-header p {
+  margin-top: 5px;
+  color: #666;
+}
+
+.merchant-name {
+  margin: 0;
+  color: #1e73be;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* ===== FORM CONTAINER ===== */
+.form-container {
+  max-width: 1100px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+}
+
+/* ===== SECTIONS ===== */
+.form-section {
+  border: 1px solid #ccc;
+  margin-bottom: 25px;
+}
+
+.section-title {
+  background: #3a3f44;
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.section-content {
+  padding: 15px;
+}
+
+/* ===== GRID ===== */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px;
+}
+
+/* ===== CHAMPS ===== */
+.field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+}
+
+/* ===== CHECKBOX ===== */
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ===== FOOTER ===== */
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel {
+  background: #ccc;
+}
+
+.save {
+  background: #2ecc71;
+  color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}

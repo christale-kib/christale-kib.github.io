@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajouter un contact</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="page-header">
+    <div class="header-content">
+      <div class="header-left">
+        <h1>FICHE D'ENROLEMENT</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="header-right">
+        <p class="merchant-name">Merchant: <strong>Nom du Merchant</strong></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== FORMULAIRE ===== -->
+  <form class="form-container">
+
+    <!-- SECTION : INFORMATION DU CHAUFFEUR -->
+    <div class="form-section">
+      <div class="section-title">INFORMATION DU CHAUFFEUR</div>
+
+      <div class="section-content grid-2">
+        <div class="field">
+          <label>Nom(s) et Prénom(s)</label>
+          <input type="text">
+        </div>
+
+        <div class="field">
+          <label>Date de naissance</label>
+          <input type="date">
+        </div>
+
+        <div class="field">
+          <label>Lieu de naissance</label>
+          <input type="text">
+        </div>
+
+        <div class="field">
+          <label>Adresse</label>
+          <input type="text">
+        </div>
+
+        <div class="field">
+          <label>Numero de Telephone</label>
+          <input type="tel"
+                        pattern="[0-9]{9}"
+                        maxlength="9"
+                        inputmode="numeric"
+                        required
+                    >
+        </div>
+
+        <div class="field">
+          <label>Numero du Permis</label>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION : VEHICULE -->
+    <div class="form-section">
+      <div class="section-title">INFORMATION DU VEHICULE</div>
+
+      <div class="section-content grid-2">
+        <div class="field">
+          <label>Type de vehicule</label>
+          <select>
+            <option>corola</option>
+            <option>nissan</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Immatriculation du Taxi</label>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION : RECHERCHE IMMOBILIÈRE -->
+    <div class="form-section">
+      <div class="section-title">INFORMATION DU MERCHANT</div>
+
+      <div class="section-content">
+        <div class="checkbox-group">
+          <label>Nom d'utilisateur</label>
+          <input type="text">
+          <label>Numero merchant</label>
+          <input type="tel">
+          <label>Zone d'opération</label>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="form-footer">
+      <button type="button" class="btn cancel">Annuler</button>
+      <button type="submit" class="btn save">Enregistrer la fiche contact</button>
+    </div>
+
+  </form>
+
+</body>
+</html>
