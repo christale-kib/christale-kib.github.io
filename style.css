@@ -93,4 +93,28 @@ input[type="submit"]{
     color: #fff;
     cursor: pointer;
     border-radius: 4px;
+
+}
+
+/* ================= LIEN CONNEXION ================= */
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.login-link a {
+    color: #03fe78;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+    color: #d803fe;
 }
